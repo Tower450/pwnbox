@@ -163,7 +163,8 @@ RUN git clone https://github.com/tmux-plugins/tmux-resurrect.git /opt/tmux-resur
 RUN git clone https://github.com/niklasb/libc-database /opt/libc-database
 
 # install peda
-RUN git clone https://github.com/longld/peda.git /opt/peda
+RUN git clone https://github.com/longld/peda.git /opt/peda && \
+    echo "source /opt/peda/peda.py" >> ~/.gdbinit
 
 # install gef
 RUN git clone https://github.com/hugsy/gef.git /opt/gef
